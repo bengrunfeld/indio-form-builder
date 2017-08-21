@@ -1,22 +1,18 @@
 import React, { Component } from 'react'
-import { Map } from 'immutable'
+import { Provider } from 'react-redux'
+import configureStore from './app/state/store'
+
 import './App.css'
+
+const initialState = {}
+const store = configureStore(initialState)
 
 class App extends Component {
   render() {
-    const obj = {a: 1, b: 2, c: 3, d: 4}
-    const map1 = Map(obj)
-    
     return (
-      <div className="App">
-        <h1>Maps</h1>
-        <ul>
-          <li>{map1.get('a')}</li>
-          <li>{map1.get('b')}</li>
-          <li>{map1.get('c')}</li>
-          <li>{map1.get('d')}</li>
-        </ul>
-      </div>
+      <Provider store={store}>
+        <p>Hello</p>
+      </Provider>
     )
   }
 }
