@@ -6,7 +6,7 @@ const sayHello = () => {
 
 function *tabsSaga() {
   yield call(sayHello)
-  console.log('there')
+  console.log('Tab Saga Clicked')
 }
 
 export default tabsSaga

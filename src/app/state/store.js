@@ -1,8 +1,7 @@
-import React from 'react'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
-import rootSaga from './modules/tabs/tabs-saga'
+import rootSaga from './sagas'
 import * as reducers from './modules'
 
 const configureStore = (initialState) => {

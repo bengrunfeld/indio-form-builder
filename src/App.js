@@ -7,6 +7,8 @@ import './App.css'
 const initialState = {}
 const store = configureStore(initialState)
 
+store.dispatch({type: 'TAB_CLICK'})
+
 class App extends Component {
   render() {
     return (
