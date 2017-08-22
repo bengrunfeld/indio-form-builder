@@ -15,7 +15,7 @@ const Tab = ({title, active=false, url, selectedTab, changeTab}) => {
   )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     selectedTab: state.selectedTab
   }

@@ -7,7 +7,9 @@ const Create = () => {
         <h3 className="panel-title">Create</h3>
       </div>
       <div className="panel-body">
-        Panel content
+        
+
+        <button type="button" className="btn btn-primary">Add Input</button>
       </div>
     </div>
   )
