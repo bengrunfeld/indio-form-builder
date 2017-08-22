@@ -1,0 +1,5 @@
+@import "./constants.scss"
+
+.active a {
+  background-color: $tabColor !important;
+}

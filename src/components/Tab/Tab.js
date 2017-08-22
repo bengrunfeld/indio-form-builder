@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { tabOperations } from '../../app/state/modules/tabs'
 
+import './tab.css'
+
 const Tab = ({title, active=false, url, selectedTab, changeTab}) => {
-  const isSelected = (selectedTab === title) ? 'active' : ''
+  const isSelected = (selectedTab === title) ? 'active selected' : ''
 
   return (
     <li role='presentation' className={isSelected} onClick={changeTab.bind(this, title)}>

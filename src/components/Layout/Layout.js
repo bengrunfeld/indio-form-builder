@@ -10,13 +10,15 @@ const Layout = () => {
   return (
     <Router>
       <section className='container layout'>
-        <div className='row'>
-          <Menu>
-            <Tab title='Create' url='create' />
-            <Tab title='Preview' url='preview' />
-            <Tab title='Export' url='export' />
-          </Menu>
-          { routes }
+        <div className='row panel panel-default'>
+          <div className='panel-body'>
+            <Menu>
+              <Tab title='Create' url='create' />
+              <Tab title='Preview' url='preview' />
+              <Tab title='Export' url='export' />
+            </Menu>
+            { routes }
+          </div>
         </div>
       </section>
     </Router> 
