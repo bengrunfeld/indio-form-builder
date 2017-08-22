@@ -1,1 +1,1 @@
-export { default as tabs } from './tabs'
+export { default as rootReducer } from './tabs/reducers'

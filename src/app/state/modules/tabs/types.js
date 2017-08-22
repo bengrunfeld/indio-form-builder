@@ -1,5 +1,5 @@
-const CHANGE_TABS = 'tabs/CHANGE_TABS'
+const CHANGE_TAB = 'tabs/CHANGE_TAB'
 
 export default {
-  CHANGE_TABS
+  CHANGE_TAB
 }
