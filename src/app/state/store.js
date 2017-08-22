@@ -15,6 +15,8 @@ const configureStore = (initialState) => {
 
   sagaMiddleware.run(rootSaga)
 
+  store.subscribe( () => console.log(store.getState()) )
+  
   return store
 }
 

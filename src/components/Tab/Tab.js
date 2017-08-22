@@ -7,7 +7,7 @@ const Tab = ({title, active=false, url, selectedTab, changeTab}) => {
   const isSelected = (selectedTab === title) ? 'active' : ''
 
   return (
-    <li role='presentation' className={isSelected} onClick={changeTab.bind(this, url)}>
+    <li role='presentation' className={isSelected} onClick={changeTab.bind(this, title)}>
       <Link to={url}>{title}</Link>
     </li>
   )
