@@ -1,7 +1,6 @@
 import actions from './actions'
-import types from './types'
 
-const navigateToTab = (target) => {
+const navigateToTab = target => {
   return actions.changeTab(target)
 }
 

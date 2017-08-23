@@ -4,7 +4,8 @@ import configureStore from '../../app/state/store'
 import Layout from '../Layout/Layout'
 
 const initialState = {
-  selectedTab: 'Create'
+  selectedTab: 'Create',
+  cards: []
   // Potentially have a sample question here
   // to illustrate to User how app works
 }

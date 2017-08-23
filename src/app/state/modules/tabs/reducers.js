@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import types from './types'
 
 const selectedTab = (state='', action) => 
@@ -6,6 +5,4 @@ const selectedTab = (state='', action) =>
   action.payload:
   state
 
-export default combineReducers({
-  selectedTab
-})
+export default selectedTab
