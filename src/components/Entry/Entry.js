@@ -5,7 +5,8 @@ import Layout from '../Layout/Layout'
 
 const initialState = {
   selectedTab: 'Create',
-  cards: []
+  cards: [],
+  ids: {}
   // Potentially have a sample question here
   // to illustrate to User how app works
 }

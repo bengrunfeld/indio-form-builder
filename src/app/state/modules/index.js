@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import selectedTab from './tabs/reducers'
-import cards from './cards/reducers'
+import selectedTab from './tabs'
+import cards from './cards'
+import ids from './ids'
 
 export default combineReducers({
   selectedTab,
-  cards
+  cards,
+  ids
 })

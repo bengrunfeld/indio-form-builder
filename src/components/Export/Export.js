@@ -8,7 +8,7 @@ const Export = ({state}) => {
         <h3 className="panel-title">Export</h3>
       </div>
       <div className="panel-body">
-        {JSON.stringify(state)}
+        <p><pre>{JSON.stringify(state, null, 4)}</pre></p>
       </div>
     </div>
   )

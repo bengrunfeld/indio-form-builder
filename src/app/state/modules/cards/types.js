@@ -1,5 +1,11 @@
 const CREATE_CARD = 'cards/CREATE_CARD'
+const DELETE_CARD = 'cards/DELETE_CARD'
+const CHANGE_TYPE = 'cards/CHANGE_TYPE'
+const UPDATE_QUESTION = 'cards/UPDATE_QUESTION'
 
 export default {
-  CREATE_CARD
+  CREATE_CARD,
+  DELETE_CARD,
+  CHANGE_TYPE,
+  UPDATE_QUESTION
 }

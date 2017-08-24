@@ -2,14 +2,14 @@
   selectedTab: 'Create'
   cards: [
     {
-      question: What type of Car,
-      answer: Toyota,
-      orderNum: 2,
+      question: 'What type of car',
+      type: text OR number OR yesno,
+      id: 0
       children: [
         {
-          question: What type of Car,
-          answer: Toyota,
-          orderNum: 2,
+          condition: equals OR greater than OR less than,
+          answer: 'Toyota',
+          question: 'What color of car',
           children: []
         },
       ]
