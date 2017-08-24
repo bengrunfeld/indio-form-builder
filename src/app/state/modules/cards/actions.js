@@ -28,9 +28,17 @@ export const updateQuestion = data => {
   })
 }
 
+export const addSubInput = data => {
+  return ({
+    type: types.ADD_SUB_INPUT,
+    payload: data
+  })
+}
+
 export default {
   createTopLevelCard,
   deleteCard,
   changeCardType,
-  updateQuestion
+  updateQuestion,
+  addSubInput
 }

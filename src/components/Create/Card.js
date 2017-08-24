@@ -13,6 +13,12 @@ class Card extends Component {
       value: ''
     }
     this.handleTextChange = this.handleTextChange.bind(this);
+    this.addSubInput = this.addSubInput.bind(this);
+  }
+
+  addSubInput(id) {
+    const { addSubInput } = this.props
+    addSubInput(id)
   }
 
   handleTextChange(event) {
@@ -62,7 +68,7 @@ class Card extends Component {
                 </div>
               </div>
               <div className='actions pull-right'>
-                <button type='button' className='btn btn-default subInput'>Add Sub-Input</button>
+                <button type='button' className='btn btn-default subInput' onClick={this.addSubInput.bind(this, id)}>Add Sub-Input</button>
                 <button type='button' className='btn btn-danger' onClick={this.deleteCardAndId.bind(this, id)}>Delete</button>
               </div>
             </div>
@@ -83,6 +89,7 @@ const mapDispatchToProps = {
   changeCardType: cardOperations.changeCardType,
   deleteCard: cardOperations.deleteCard,
   updateQuestion: cardOperations.updateQuestion,
+  addSubInput: cardOperations.addSubInput,
   deleteId: idsOperations.deleteId
 }
 

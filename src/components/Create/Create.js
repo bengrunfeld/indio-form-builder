@@ -3,28 +3,16 @@ import { connect } from 'react-redux'
 import Card from './Card'
 import { cardOperations } from '../../app/state/modules/cards'
 import { idsOperations } from '../../app/state/modules/ids'
+import cardDataTemplate from '../../app/utils/card-data-template'
+import assignNewId from '../../app/utils/create-new-id'
 
 
 const Create = ({cards, createTopLevelCard, ids, createId}) => {
   if (!cards)
     cards = []
-
-  const assignNewId = () => {
-    const randomNum = ~~(Math.random() * 1000000)
-    if (ids.hasOwnProperty(randomNum)) {
-      assignNewId()
-    }
-    return randomNum
-  }
   
   const createNewCard = () => {
-    const cardData = {
-      question: '',
-      type: 'text',
-      children: [],
-      id: assignNewId()
-    }
-
+    const cardData = Object.assign({}, cardDataTemplate, {id: assignNewId(ids)})
     createTopLevelCard(cardData)
     createId(cardData.id)
   }

@@ -16,9 +16,14 @@ const updateQuestion = data => {
   return actions.updateQuestion(data)
 }
 
+const addSubInput = data => {
+  return actions.addSubInput(data)
+}
+
 export default {
   createTopLevelCard,
   deleteCard,
   changeCardType,
-  updateQuestion
+  updateQuestion,
+  addSubInput
 }

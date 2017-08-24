@@ -1,4 +1,3 @@
-# Stanza Coding Challenge
+# Indio Form Builder
 
-This application uses Facebook's `create-react-app` npm module. Support for Sass, Redux, Redux Saga, and GraphQL has been added.
-
+Creates nested dynamic forms and exports their JSON.

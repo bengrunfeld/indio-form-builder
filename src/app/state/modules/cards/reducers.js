@@ -1,4 +1,5 @@
 import types from './types'
+import subCardDataTemplate from '../../../utils/sub-card-data-template'
 
 const cards = (state=[], action) => {
   switch(action.type) {
@@ -19,19 +20,26 @@ const cards = (state=[], action) => {
         const newItem = Object.assign({}, item, {type: action.payload.type})
         return newItem
       })
-      console.log(stateWithNewType)
       return stateWithNewType
       break
     case types.UPDATE_QUESTION:
-      const result = state.map((item) => {
+      return state.map((item) => {
         if (item.id !== parseInt(action.payload.id))
           return item
 
         return Object.assign({}, item, {question: action.payload.question})
       })
-      console.log(result)
-      return result
       break
+    case types.ADD_SUB_INPUT:
+      const stateWithSubInput = state.map((item) => {
+        if (item.id !== parseInt(action.payload))
+          return item
+
+        return Object.assign({}, item, {children: [...item.children, subCardDataTemplate]})
+      })
+      
+      console.log(stateWithSubInput)
+      return stateWithSubInput
     default:
       return state
   }
